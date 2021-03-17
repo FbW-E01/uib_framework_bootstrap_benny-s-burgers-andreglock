@@ -25,14 +25,13 @@ h1, h2, h3, h4 {
         font-size: 6.5em;
     }
     .display-5 {
-        font-size: 4em;
+        font-size: 3.5em;
     }
 }
 
-@include media-breakpoint-up(md) { 
+@include media-breakpoint-up(lg) { 
     .display-5 {
-        font-size: 5em;
-        line-height: 2.5em;
+        font-size: 4em;
     }
 }
 
@@ -181,6 +180,12 @@ form {
             border: 1px solid #bbb;
             background-color: white;
         }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    form {
+        max-width: 470px;
     }
 }
 
