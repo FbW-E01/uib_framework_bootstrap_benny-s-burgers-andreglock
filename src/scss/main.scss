@@ -4,9 +4,6 @@ $primary: #7a44ff;
 // This is where you can import other stylesheets or write your scss code
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-
-
-
 h1, h2, h3, h4 {
     font-family: 'Love Ya Like A Sister', cursive;
     font-weight: bold;
@@ -21,7 +18,7 @@ h1, h2, h3, h4 {
     font-size: 2.2em;
 }
 
-@media (min-width: 768px) /* md in Bootstrap */{ 
+@include media-breakpoint-up(md) { 
     .display-3 {
         font-size: 6.5em;
     }
@@ -63,7 +60,7 @@ nav {
     }
 }
 
-@media (min-width: 768px) /* md in Bootstrap */{ 
+@include media-breakpoint-up(md) { 
     .hero {
         padding: 140px 40% 80px 10%;
     }
@@ -122,7 +119,7 @@ div.mainbottom {
     }
 }
 
-@media (min-width: 768px) /* md in Bootstrap */{ 
+@include media-breakpoint-up(md) { 
     div.mainbottom {
         div.card-deck {
             align-items: center;
@@ -148,7 +145,7 @@ div.mainbottom {
     }
 }
 
-@media (min-width: 1024px) /* lg in Bootstrap */{ 
+@include media-breakpoint-up(lg) { 
     div.mainbottom {
         div.card-deck {
             div.card:nth-child(3) {
