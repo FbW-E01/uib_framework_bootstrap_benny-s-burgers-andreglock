@@ -1,2 +1,198 @@
+$card-border: solid 1px black;
+$primary: #7a44ff;
+
 // This is where you can import other stylesheets or write your scss code
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+h1, h2, h3, h4 {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-weight: bold;
+}
+
+.display-3 {
+    font-size: 4.5em;
+}
+
+.display-5 {
+    text-align: center;
+    color: #444444;
+    font-size: 2.2em;
+    line-height: 2em;
+}
+
+@include media-breakpoint-up(md) { 
+    .display-3 {
+        font-size: 6.5em;
+    }
+    .display-5 {
+        font-size: 3.5em;
+    }
+}
+
+@include media-breakpoint-up(lg) { 
+    .display-5 {
+        font-size: 4em;
+    }
+}
+
+button, div.card, input, textarea, select {
+    border-radius: 0 !important;
+}
+
+nav {
+    background-color: black;
+
+    a {
+        color: $primary;
+        font-weight: bold;
+    }    
+    img {
+        height: 1em;
+    }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+}
+
+.hero { 
+    background-image: url(../images/lidye-1Shk_PkNkNw-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 40px 40px 40px 10px;
+    text-align: left;
+
+    p {
+        font-size: x-large;
+        font-weight: bold;
+    }
+}
+
+@include media-breakpoint-up(md) { 
+    .hero {
+        padding: 140px 40% 80px 10%;
+    }
+}
+
+div.card-body {
+    div {
+        border: $card-border;
+        height: 100px;
+        width: 100px;
+        background-position: center;
+        background-size: 65%;
+        background-repeat: no-repeat;
+        background-color: #f8f9fa;
+    }
+}
+
+div.card:nth-child(1) {
+    div.rounded-circle {
+        background-image: url(../images/care.svg);;
+    }
+}
+
+div.card:nth-child(2) {
+    div.rounded-circle {
+        background-image: url(../images/plant.svg);;
+    }
+}
+
+div.card:nth-child(3) {
+    div.rounded-circle {
+        background-image: url(../images/heart.svg);;
+    }
+}
+
+div.mainbottom {
+    background-color: $primary;
+
+    h2 {
+        color: white;
+    }
+    div.card-deck {
+        div.card {
+            margin: 125px 0;
+            border: $card-border;
+
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+    div.card-deck {
+        div.card:nth-child(n + 2) {
+            display: none;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) { 
+    div.mainbottom {
+        div.card-deck {
+            align-items: center;
+
+            div.card {
+                height: auto;
+                margin: 50px 10px;
+            }
+            div.card:nth-child(1) {
+                flex-basis: 140px;
+            }
+
+            div.card:nth-child(2) {
+                display: flex;
+                flex-basis: 200px;
+            }
+
+            div.card:nth-child(3) {
+                display: flex;
+                flex-basis: 90px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) { 
+    div.mainbottom {
+        div.card-deck {
+            div.card:nth-child(3) {
+                display: flex;
+                flex-basis: 110px;
+            }
+            div.card:nth-child(4) {
+                display: flex;
+                flex-basis: 110px;
+            }
+        }
+    }
+}
+
+form {
+    max-width: 425px;
+    .form-group {
+        margin-bottom: 25px;
+
+        label, input {
+            width: 100%;
+        }
+        input {
+            border: 1px solid #bbb;
+            background-color: white;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    form {
+        max-width: 470px;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    color: #6c757d;
+    background-color: #000000;
+}
